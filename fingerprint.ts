@@ -4,7 +4,7 @@ const decoder = Deno.run({
   cmd: [
     "ffmpeg",
     "-i",
-    "pipe:0",
+    "hw:3,0",
     "-acodec",
     "pcm_s16le",
     "-ar",
@@ -12,7 +12,7 @@ const decoder = Deno.run({
     "-ac",
     "1",
     "-f",
-    "s16le",
+    "alsa",
     "-v",
     "fatal",
     "pipe:1",
