@@ -1,0 +1,16 @@
+{
+  "imports": {
+    "@qgustavor/stream-audio-fingerprint": "npm:@qgustavor/stream-audio-fingerprint@^2.0.6"
+  },
+  "tasks": {
+    "dev": "deno run --watch fingerprint.ts",
+    "build": "deno run --allow-env --allow-write fingerprint.ts"
+  },
+  "fmt": {
+    "options": {
+      "indentWidth": 4,
+      "lineWidth": 100,
+      "singleQuote": true
+    }
+  }
+}

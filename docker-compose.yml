@@ -4,6 +4,7 @@ services:
     container_name: doorbell-homeassistant
     restart: unless-stopped
     build: .
+    pull_policy: build
     privileged: true
     devices:
       - /dev/bus/usb:/dev/bus/usb
