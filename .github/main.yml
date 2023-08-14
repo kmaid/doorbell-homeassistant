@@ -1,0 +1,21 @@
+name: Deploy to Portainer
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-doorbell-homeassistant:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 10
+      - name: deploy
+        uses: kmaid/portainer-stack-redeploy-action@main
+        with:
+          portainerUrl: https://portainer.toob.cc
+          accessToken: ${{ secrets.PORTAINER_ACCESS }}
+          stackId: 16
+          endpointId: 1
+          repositoryReferenceName: "refs/heads/main"
