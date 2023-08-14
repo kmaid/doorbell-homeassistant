@@ -1,9 +1,11 @@
 version: "3.9"
 services:
-  fingerprint-homeassistant:
-    container_name: fingerprint-homeassistant
+  doorbell-homeassistant:
+    container_name: doorbell-homeassistant
     restart: unless-stopped
     build: .
     privileged: true
     devices:
       - /dev/bus/usb:/dev/bus/usb
+    volumes:
+      - /var/doorbell-homeassistant:/doorbell-homeassistant
