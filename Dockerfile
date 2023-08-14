@@ -10,4 +10,5 @@ RUN mkdir /app
 WORKDIR /app
 ADD . .
 
-CMD ["run", "--allow-run", "fingerprint.ts"]
+# CMD ["run", "--allow-run", "fingerprint.ts"]
+CMD [ "tail", "-f", "/dev/null" ]
