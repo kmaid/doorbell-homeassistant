@@ -3,6 +3,7 @@ FROM denoland/deno:alpine
 RUN apk update
 RUN apk upgrade
 RUN apk add ffmpeg # Audio parser
-RUN apk add alsa-utils alsaconf # Audio Drivers
+RUN apk add sof-firmware # Audio Drivers
+RUN apk add alsa-utils alsaconf # utils
 
 ENTRYPOINT [ "tail", "-f", "/dev/null" ]

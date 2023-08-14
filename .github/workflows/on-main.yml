@@ -7,8 +7,6 @@ jobs:
   deploy-doorbell-homeassistant:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: deploy
         uses: kmaid/portainer-stack-redeploy-action@main
         with:
