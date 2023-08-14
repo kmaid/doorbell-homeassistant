@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  fingerprint-homeassistant:
+    container_name: fingerprint-homeassistant
+    restart: unless-stopped
+    build: .
+    privileged: true
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
